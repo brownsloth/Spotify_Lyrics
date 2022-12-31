@@ -82,7 +82,7 @@ EXEC=$hadoop jar c:\hadoop-2.8.0\share\hadoop\tools\lib\hadoop-streaming-*.jar -
 echo "$EXEC"
 ```
 #### Hadoop Web UI 
-<img src="https://github.com/Bayunova28/Spotify_Lyrics/blob/master/hadoop-web-ui.jpg" height="600" width="1100">
+<img src="https://github.com/Bayunova28/Spotify_Lyrics/blob/master/hadoop-web-ui.jpg" height="550" width="1100">
 
 ## Acknowledgement
 * <b>Data Source : [Spotify Million Song Dataset](https://www.kaggle.com/datasets/notshrirang/spotify-million-song-dataset)
