@@ -88,3 +88,4 @@ echo "$EXEC"
 * <b>Data Source : [Spotify Million Song Dataset](https://www.kaggle.com/datasets/notshrirang/spotify-million-song-dataset)
 * <b>Mapreduce Tutorial : [Michael G. Noll](https://www.michael-noll.com/tutorials/writing-an-hadoop-mapreduce-program-in-python/)
 * <b>Hadoop Tutorial : [Edureka](https://www.youtube.com/watch?v=g7Qpnmi0Q-s)
+* <b>Hive Tutorial : [Simplilearn](https://www.youtube.com/watch?v=rr17cbPGWGA)</b>
