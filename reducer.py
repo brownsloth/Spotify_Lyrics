@@ -1,9 +1,8 @@
-#!/usr/bin/env python
-"""reducer.py"""
-
+# import python library
 from operator import itemgetter
 import sys
 
+# set parameter from words dataset
 current_word = None
 current_count = 0
 word = None
