@@ -81,6 +81,48 @@ if current_word == word:
 EXEC=$hadoop jar c:\hadoop-2.8.0\share\hadoop\tools\lib\hadoop-streaming-*.jar -file "D:\mapper.py" -mapper "python D:\mapper.py" -file "D:\reducer.py" -reducer "python D:\reducer.py" -input spotify/samples.txt -output spotify/output/
 echo "$EXEC"
 ```
+
+
+upload csv to HDFS
+`hdfs dfs -mkdir -p /user/spotify/`
+`hdfs dfs -put ./spotify_millsongdata.csv /user/spotify/spotify_millsongdata.csv`
+`hdfs dfs -ls /user/spotify/`
+`hdfs dfs -rm -r /user/spotify/output/`
+
+stop-all.sh
+start-dfs.sh
+start-yarn.sh
+
+
+`hdfs dfs -rm -r /user/spotify/output/ && hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-*.jar \
+-files "mapper.py,reducer.py" -mapper "python3 mapper.py" \
+-reducer "python3 reducer.py" \
+-input /user/spotify/spotify_millsongdata.csv -output /user/spotify/output/`
+
+
+```sh
+hdfs dfs -rm -r /user/spotify/output/ && hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-*.jar \
+-file "mapper.py" -mapper mapper.py \
+-file "reducer.py" -reducer reducer.py \
+-input /user/spotify/spotify_millsongdata.csv -output /user/spotify/output/
+```
+
+mapred streaming -files mapper.py,reducer.py \
+-input /user/spotify/spotify_millsongdata.csv \
+-output /user/spotify/output/ \
+-mapper ./mapper.py \
+-reducer ./reducer.py
+
+hadoop jar /usr/hdp/3.0.0.0-1634/hadoop-mapreduce/hadoop-streaming-3.1.0.3.0.0.0-1634.jar -Dmapred.reduce.tasks=0 -file /home/mapper3.py -mapper mapper3.py -file /home/reducer3.py -reducer reducer3.py -file /home/ErrorHandle.py -file /home/ExceptionUtil.py -input /data/studentMapReduce/student1.txt -output outputMapReduceFile.txt
+
+
+hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-*.jar \
+-files "mapper.py,reducer.py" -mapper "python3 mapper.py" \
+-reducer "python3 reducer.py" \
+-input /user/spotify/spotify_millsongdata.csv -output /user/spotify/output/
+
+
+
 #### Hadoop Web UI 
 <img src="https://github.com/Bayunova28/Spotify_Lyrics/blob/master/hadoop-web-ui.jpg" height="550" width="1100">
 

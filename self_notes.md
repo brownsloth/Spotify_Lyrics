@@ -1,0 +1,1 @@
+official samples: https://github.com/cloudxlab/bigdata/tree/master/hdpexamples/python-streaming
